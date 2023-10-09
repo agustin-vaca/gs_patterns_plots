@@ -9,5 +9,6 @@ Please download the json files from [here](https://drive.google.com/drive/folder
 ## Dependencies
 
 [Python](https://www.python.org/downloads/)
+
 [Plotly](https://plotly.com/python/getting-started/#installation)
 

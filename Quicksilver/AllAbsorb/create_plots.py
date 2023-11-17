@@ -10,6 +10,8 @@ for i in range(10):
     # Gather
     ##########################
     gather = df.get("pattern")[i]
+    print(f"Gather {i}, Pattern length:" +  len(df.get("pattern")[i]))
+    gather = gather[0:1000]
 
     #Gather Histogram
     fig = px.histogram(x=gather, 
@@ -19,7 +21,7 @@ for i in range(10):
 
     #Gather Bandwidth
     fig = px.scatter(y=gather, 
-    title="Quicksilver AllAbsorb, Bandwidth func=CollisionEvent, Gather", log_y=True, log_x=True).update_layout(xaxis_title="i", yaxis_title="pattern[i]")
+    title="Quicksilver AllAbsorb, Bandwidth func=CollisionEvent, Gather").update_layout(xaxis_title="i", yaxis_title="pattern[i]")
     fig.write_html(f"gather_bandwidth/Gather{i}_Bandwidth.html")
 
     #Gather delta
@@ -40,6 +42,7 @@ for i in range(10):
     #Scatter
     ################################
     scatter = df.get("pattern")[i+10]
+    print(f"Scatter {i}, Pattern length:" +  len(df.get("pattern")[i+10]))
     
     #Scatter histogram
     fig = px.histogram(x=scatter, 

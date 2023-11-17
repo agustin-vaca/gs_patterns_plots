@@ -8,6 +8,8 @@ for i in range(10):
     # Gather
     ##########################
     gather = df.get("pattern")[i]
+    print(f"Gather {i}, Pattern length:" +  len(df.get("pattern")[i]))
+    gather = gather[0:1000]
 
     #Gather Histogram
     fig = px.histogram(x=gather, 
@@ -38,6 +40,7 @@ for i in range(10):
     #Scatter
     ################################
     scatter = df.get("pattern")[i+10]
+    print(f"Scatter {i}, Pattern length:" +  len(df.get("pattern")[i+10]))
     
     #Scatter histogram
     fig = px.histogram(x=scatter, 
